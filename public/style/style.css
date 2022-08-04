@@ -1,0 +1,868 @@
+:root {
+  --navbar-font: 'Titillium Web', sans-serif;
+  --navbar-font-weight: 300;
+  --navbar-font-color: #d3d0d0;
+  --blue-principal-color: #004f6e;
+
+  --home-body-font: 'Rajdhani', sans-serif;
+  --home-body-weight: bold;
+}
+
+* {
+  box-sizing: content-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0px;
+  margin: 0px;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  text-align: center;
+  font-family: var(--navbar-font);
+  font-weight: 900;
+  margin-bottom: 10px;
+  font-size: 2rem;
+}
+
+p {
+  font-family: var(--home-body-font);
+}
+
+.header-underline {
+  width: 6rem;
+  height: 2px;
+  background-color: #d32e12;
+  border: none;
+}
+
+.navbar {
+  display: flex;
+  background-color: #00000052;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  transition: 0.7s;
+}
+
+.hamburger {
+  display: none;
+}
+
+.dark {
+  background-color: #2e2d2d;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  font-family: var(--navbar-font);
+  font-weight: var(--navbar-font-weight);
+  color: var(--navbar-font-color);
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 0;
+}
+
+.navigation li {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+.navigation li a {
+  transition: 0.2s;
+}
+
+.navigation li a:not(.lenguage):focus {
+  color: #ffffff;
+}
+
+.lenguage {
+  cursor: pointer;
+  margin: 0;
+}
+
+.hamburger-navigation {
+  display: none;
+}
+
+.lenguage-dropdown {
+  background-color: white;
+  clip-path: polygon(50% 0, 53% 5%, 100% 5%, 100% 100%, 0 100%, 0 5%, 47% 5%);
+  position: fixed;
+  top: 9vh;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.2s;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--home-body-font);
+  border-radius: 0 0 25px 25px;
+}
+
+.lenguage-dropdown div {
+  padding: 0 0.5rem 0 0.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.lenguage-dropdown .spanish-div,
+.lenguage-dropdown .english-div {
+  vertical-align: middle;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 25px;
+}
+
+.lenguage-dropdown .spanish-div:hover,
+.lenguage-dropdown .english-div:hover {
+  background-color: #dddddd;
+}
+
+.lenguage-dropdown .spanish-p,
+.lenguage-dropdown .usa-p {
+  margin: 0;
+}
+
+.lenguage-dropdown .spanish-p::before,
+.lenguage-dropdown .usa-p::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  float: left;
+}
+
+.lenguage-dropdown .spanish-p::before {
+  background: url('../media/icons8-spain-32.png') no-repeat;
+}
+
+.lenguage-dropdown .usa-p::before {
+  background: url('../media/icons8-usa-32.png') no-repeat;
+}
+
+.home-background {
+  height: 100%;
+  width: 100%;
+  background-image: url('../media/pipelines.jpg');
+  background-position: center;
+  position: absolute;
+  z-index: -1;
+  background-size: cover;
+  filter: brightness(30%);
+  -webkit-filter: brightness(30%);
+  -moz-filter: brightness(30%);
+}
+
+.home-body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-body .home-content {
+  font-family: var(--home-body-font);
+  font-weight: var(--home-body-weight);
+  color: #f7f8f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 10px 0 10px;
+}
+
+.home-content p:nth-child(1) {
+  display: block;
+  font-size: 5.6rem;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.home-content p:nth-child(2) {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0;
+  text-align: center;
+}
+
+.home-content button {
+  background-color: #d32f12;
+  border-radius: 20px;
+  border: none;
+  font-family: var(--home-body-font);
+  font-size: 1.7rem;
+  height: 60px;
+  width: 300px;
+  color: #ffffff;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.home-content button:hover{
+  opacity: 0.85;
+}
+
+.about-body {
+}
+
+.about-body .about-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-content .about-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  width: 20%;
+  border-radius: 15px;
+  padding: 1rem;
+  border: 1px solid rgb(130, 130, 130);
+  background-image: linear-gradient(
+    to bottom,
+    #f7f7f7,
+    #f2f1f2,
+    #edeceb,
+    #e8e6e5,
+    #e1e1df
+  );
+  transform: translate(0, 50%);
+  opacity: 0;
+}
+
+.about-card .card-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about-card .card-header i {
+  font-size: 3rem;
+  color: #004f6e;
+  margin-bottom: 0.5rem;
+}
+
+.about-card .card-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.about-card hr {
+  background-color: #2e2d2d;
+  width: 90%;
+  height: 1px;
+  border: none;
+}
+
+.about-card .about-text {
+  font-size: 1.3rem;
+  font-family: var(--home-body-font);
+  text-align: justify;
+  margin-bottom: 0;
+  padding: 0.5rem;
+}
+
+.principals-body {
+  background-color: #f7f8f8;
+}
+
+.principals-body .principals-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.principals-content .logos-table {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+}
+
+.logos-table .logo-row {
+  display: flex;
+  justify-content: center;
+  gap: 15%;
+  padding: 1rem;
+  text-align: center;
+  vertical-align: bottom;
+  font-size: 1.1rem;
+  height: auto;
+  width: auto;
+  opacity: 0;
+  transform: translateY(50%);
+}
+
+.logos-table .logo-row .logo-cell .logo-sprite {
+  cursor: pointer;
+  width: 150px; 
+  height: 150px;
+  background-image: url('../media/principals-sprites150.png')
+}
+
+.crc-logo{
+  background-position: -190px -10px;
+}
+
+.applus-logo{
+  background-position: -20px -10px;
+}
+
+.gba-logo{
+  background-position: -360px -10px;
+}
+
+.plidco-logo{
+  background-position:  -870px -10px ;
+}
+
+.murphy-logo{
+  background-position: -700px -10px;
+}
+
+.tdw-logo{
+  background-position: -1040px -10px;
+}
+
+.jonell-logo{
+  background-position: -530px -10px;
+}
+
+.logos-table .logo-row .logo-cell p {
+  transition: 00.2s;
+}
+
+.logos-table .logo-row .logo-cell hr {
+  background-color: #828282;
+  width: 40%;
+  height: 2px;
+  border: none;
+  transition: 0.2s;
+}
+
+.principals-content .logos-table-sm {
+  display: none;
+}
+
+.contact-body {
+}
+
+.contact-body .contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-body .contact-card {
+  display: flex;
+  background-color: #ffffff;
+  box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  -webkit-box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  -moz-box-shadow: -9px 9px 13px 1px rgba(0, 0, 0, 0.42);
+  border-radius: 15px;
+  border: 1px solid #828282;
+  padding: 1.5rem;
+  width: 50%;
+  height: auto;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+
+.contact-card .contact-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 1rem 0 1rem;
+}
+
+.contact-inputs input {
+  height: 2rem;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #828282;
+  border-radius: 15px;
+  font-family: var(--home-body-font);
+  font-size: 1rem;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.contact-inputs .iti{
+  margin-bottom: 10px;
+}
+
+.contact-inputs .iti--allow-dropdown{ 
+  width: 100%;
+  height: 2.3rem;
+}
+
+.contact-inputs input[name = 'phone']{
+  padding: 0;
+  height: 100%;
+}
+
+.contact-inputs .iti--allow-dropdown ul{
+  font-family: var(--home-body-font);
+}
+
+.contact-inputs textarea {
+  resize: none;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #828282;
+  border-radius: 15px;
+  font-family: var(--home-body-font);
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: 0.2s;
+  height: 40%;
+}
+
+.contact-inputs input::placeholder,
+.contact-inputs textarea::placeholder {
+  text-align: center;
+  font-family: var(--home-body-font);
+  font-size: 1rem;
+  color: #828282;
+}
+
+.contact-inputs input:focus::placeholder,
+.contact-inputs textarea:focus::placeholder {
+  opacity: 0;
+}
+
+.contact-inputs input:focus,
+.contact-inputs textarea:focus {
+  outline: none;
+  background-color: #8282822a;
+}
+
+.contact-card .contact-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  margin: 0 1rem 0 1rem;
+}
+
+.contact-line i,
+.contact-line p {
+  display: inline-block;
+  color: #004f6e;
+  font-size: 1rem;
+  margin-bottom: 0.1rem;
+}
+
+.contact-line p {
+  border-bottom: 1px solid #004f6e;
+}
+
+.contact-info iframe {
+  margin-top: 1rem;
+  width: 100%;
+  height: 45%;
+}
+
+.contact-card .send-button {
+  background-color: #d32f12;
+  font-family: var(--home-body-font);
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 2.5rem;
+  width: 7rem;
+  color: #ffffff;
+  border: 0px;
+  transition: 0.2s;
+  cursor: pointer;
+  margin-bottom: 0;
+  border-radius: 15px;
+}
+
+.contact-card .send-button:hover {
+  opacity: 0.85;
+}
+
+.contact-card .send-button i {
+  vertical-align: middle;
+  margin-left: 0.1rem;
+}
+
+.footer-body {
+  display: flex;
+  margin-top: 5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #2e2d2d;
+  color: #ffffff;
+  font-family: var(--home-body-font);
+  height: 20vh;
+}
+
+.footer-body i {
+  margin-right: 0.5rem;
+  transform: scale(0.8);
+}
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0px;
+  }
+
+  .navbar img {
+    transform: scale(0.9);
+  }
+
+  .header-underline {
+    width: 5rem;
+  }
+
+  .home-content p:nth-child(1) {
+    font-size: 4.5rem;
+  }
+
+  .home-content p:nth-child(2) {
+    font-size: 1.4rem;
+  }
+
+  .home-content button {
+    font-size: 1.5rem;
+    bottom: 25vh;
+  }
+
+  .about-content .about-card {
+    max-height: 90%;
+  }
+
+  .about-card .card-header i {
+    font-size: 2.2rem;
+  }
+
+  .about-card .card-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .about-card .about-text {
+    font-size: 1rem;
+  }
+
+  .logos-table .logo-row .logo-cell .logo-sprite {
+    width: 125px; 
+    height: 125px;
+    background-image: url('../media/principals-sprites125.png')
+  }
+
+  .crc-logo{
+    background-position: -165px -10px;
+  }
+  
+  .applus-logo{
+    background-position: -20px -10px;
+  }
+  
+  .gba-logo{
+    background-position: -310px -10px;
+  }
+  
+  .plidco-logo{
+    background-position: -745px -10px ;
+  }
+  
+  .murphy-logo{
+    background-position: -600px -10px;
+  }
+  
+  .tdw-logo{
+    background-position: -890px -10px;
+  }
+  
+  .jonell-logo{
+    background-position: -455px -10px;
+  }
+
+  .contact-inputs textarea {
+    height: 6.5rem;
+    resize: none;
+  }
+
+  .contact-card .send-button {
+    font-size: 1rem;
+    height: 2rem;
+    width: 6rem;
+  }
+}
+
+@media (max-width: 850px), (max-height: 450px) {
+  .navbar {
+    gap: 4rem;
+    height: 4rem;
+  }
+  .navbar .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    width: 35px;
+    z-index: 999999;
+  }
+
+  .navbar .hamburger img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .navbar .navigation {
+    display: none;
+  }
+
+  .navbar img {
+    height: 45px;
+  }
+
+  .hamburger-navigation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-color: #2e2d2df6;
+    z-index: 99999;
+    transform: translateX(100%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+
+  .hamburger-navigation .close-navigation {
+    font-size: 2rem;
+    color: #ffffff;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+  }
+
+  .hamburger-navigation .navigation {
+    margin: 0;
+  }
+
+  .lenguage-sm {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 2rem;
+    font-size: 2rem;
+    color: white;
+  }
+
+  .hamburger-navigation .navigation ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .hamburger-navigation .navigation ul li {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .home-body .home-content {
+    margin: 0px;
+  }
+
+  .home-content p:nth-child(1) {
+    display: block;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-content p:nth-child(2) {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+  }
+
+  .home-content button {
+    font-size: 1.4rem;
+    width: 270px;
+  }
+
+  .about-body {
+  }
+
+  .about-body .about-content {
+    padding: 0 2rem 0 2rem;
+    flex-direction: column;
+    height: auto;
+    gap: 3rem;
+  }
+
+  .about-content .about-card {
+    width: 100%;
+    justify-content: center;
+    transform: translate(-50%, 0);
+  }
+
+  .about-card .about-text {
+    font-size: 0.9em;
+  }
+
+  .principals-body {
+    height: auto;
+  }
+
+  .principals-body .principals-content {
+    height: auto;
+    align-items: center;
+    padding-top: 2rem;
+  }
+
+  .principals-content .logos-table {
+    display: none;
+  }
+
+  .principals-content .logos-table-sm {
+    display: block;
+    width: 100%;
+  }
+
+  .logos-table-sm .logo-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  .logos-table-sm .logo-row .logo-cell {
+    text-align: center;
+  }
+
+  .logos-table-sm .logo-row .logo-cell .logo-sprite {
+    width: 100px; 
+    height: 100px;
+    background-image: url('../media/principals-sprites100.png')
+  }
+
+  .crc-logo{
+    background-position: -140px -10px;
+  }
+  
+  .applus-logo{
+    background-position: -20px -10px;
+  }
+  
+  .gba-logo{
+    background-position: -260px -10px;
+  }
+  
+  .plidco-logo{
+    background-position: -620px -10px;
+  }
+  
+  .murphy-logo{
+    background-position: -500px -10px;
+  }
+  
+  .tdw-logo{
+    background-position: -740px -10px;
+  }
+  
+  .jonell-logo{
+    background-position: -380px -10px;
+  }
+
+  .logos-table-sm .logo-row .logo-cell hr {
+    display: none;
+  }
+
+  .contact-body {
+    height: auto;
+  }
+
+  .contact-body .contact-content {
+    height: auto;
+    padding: 0 0.5rem 0 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-body .contact-card {
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    position: relative;
+    gap: 10%;
+    box-shadow: none;
+  }
+
+  .contact-card .contact-inputs {
+    width: auto;
+  }
+
+  .contact-card .contact-inputs input {
+    margin-bottom: 10px;
+  }
+
+  .contact-card .contact-inputs textarea {
+    margin-bottom: 10px;
+  }
+
+  .contact-card hr {
+    display: block;
+    background-color: #2e2d2d;
+    width: 90%;
+    height: 1px;
+    border: none;
+    margin: 2rem 0 2rem 0;
+  }
+
+  .contact-card .contact-info {
+    width: auto;
+  }
+
+  .contact-line {
+    width: auto;
+  }
+}

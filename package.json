@@ -1,7 +1,15 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.0",
     "bootstrap-icons": "^1.8.1",
-    "intl-tel-input": "^17.0.16"
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "googleapis": "^105.0.0",
+    "intl-tel-input": "^17.0.16",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19",
+    "save": "^2.5.0"
   },
   "name": "tecmasa",
   "version": "1.0.0",
@@ -15,5 +23,6 @@
     "url": "nalvincode.github.io"
   },
   "author": "NalvinCode",
-  "license": "ISC"
+  "license": "ISC",
+  "proxy": "nalvincode.github.io"
 }

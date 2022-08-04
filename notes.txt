@@ -1,4 +1,0 @@
-Pedir imagenes de las empresas para poner un carousel el apartado principal.
-
-Desarrollar la seccion de acerca de nosotros
-
