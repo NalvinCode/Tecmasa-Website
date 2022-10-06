@@ -226,17 +226,19 @@ p {
   margin-top: 20px;
 }
 
-.home-content button:hover{
+.home-content button:hover {
   opacity: 0.85;
 }
 
 .about-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .about-body .about-content {
   display: flex;
   justify-content: space-around;
-  align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
@@ -298,6 +300,9 @@ p {
 
 .principals-body {
   background-color: #f7f8f8;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .principals-body .principals-content {
@@ -329,36 +334,36 @@ p {
 
 .logos-table .logo-row .logo-cell .logo-sprite {
   cursor: pointer;
-  width: 150px; 
+  width: 150px;
   height: 150px;
-  background-image: url('../media/principals-sprites150.png')
+  background-image: url('../media/principals-sprites150.png');
 }
 
-.crc-logo{
+.crc-logo {
   background-position: -190px -10px;
 }
 
-.applus-logo{
+.applus-logo {
   background-position: -20px -10px;
 }
 
-.gba-logo{
+.gba-logo {
   background-position: -360px -10px;
 }
 
-.plidco-logo{
-  background-position:  -870px -10px ;
+.plidco-logo {
+  background-position: -870px -10px;
 }
 
-.murphy-logo{
+.murphy-logo {
   background-position: -700px -10px;
 }
 
-.tdw-logo{
+.tdw-logo {
   background-position: -1040px -10px;
 }
 
-.jonell-logo{
+.jonell-logo {
   background-position: -530px -10px;
 }
 
@@ -379,6 +384,9 @@ p {
 }
 
 .contact-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .contact-body .contact-content {
@@ -424,21 +432,21 @@ p {
   transition: 0.2s;
 }
 
-.contact-inputs .iti{
+.contact-inputs .iti {
   margin-bottom: 10px;
 }
 
-.contact-inputs .iti--allow-dropdown{ 
+.contact-inputs .iti--allow-dropdown {
   width: 100%;
   height: 2.3rem;
 }
 
-.contact-inputs input[name = 'phone']{
+.contact-inputs input[name='phone'] {
   padding: 0;
   height: 100%;
 }
 
-.contact-inputs .iti--allow-dropdown ul{
+.contact-inputs .iti--allow-dropdown ul {
   font-family: var(--home-body-font);
 }
 
@@ -532,7 +540,7 @@ p {
   background-color: #2e2d2d;
   color: #ffffff;
   font-family: var(--home-body-font);
-  height: 20vh;
+  min-height: 10vh;
 }
 
 .footer-body i {
@@ -584,36 +592,36 @@ p {
   }
 
   .logos-table .logo-row .logo-cell .logo-sprite {
-    width: 125px; 
+    width: 125px;
     height: 125px;
-    background-image: url('../media/principals-sprites125.png')
+    background-image: url('../media/principals-sprites125.png');
   }
 
-  .crc-logo{
+  .crc-logo {
     background-position: -165px -10px;
   }
-  
-  .applus-logo{
+
+  .applus-logo {
     background-position: -20px -10px;
   }
-  
-  .gba-logo{
+
+  .gba-logo {
     background-position: -310px -10px;
   }
-  
-  .plidco-logo{
-    background-position: -745px -10px ;
+
+  .plidco-logo {
+    background-position: -745px -10px;
   }
-  
-  .murphy-logo{
+
+  .murphy-logo {
     background-position: -600px -10px;
   }
-  
-  .tdw-logo{
+
+  .tdw-logo {
     background-position: -890px -10px;
   }
-  
-  .jonell-logo{
+
+  .jonell-logo {
     background-position: -455px -10px;
   }
 
@@ -728,9 +736,6 @@ p {
     width: 270px;
   }
 
-  .about-body {
-  }
-
   .about-body .about-content {
     padding: 0 2rem 0 2rem;
     flex-direction: column;
@@ -780,36 +785,36 @@ p {
   }
 
   .logos-table-sm .logo-row .logo-cell .logo-sprite {
-    width: 100px; 
+    width: 100px;
     height: 100px;
-    background-image: url('../media/principals-sprites100.png')
+    background-image: url('../media/principals-sprites100.png');
   }
 
-  .crc-logo{
+  .crc-logo {
     background-position: -140px -10px;
   }
-  
-  .applus-logo{
+
+  .applus-logo {
     background-position: -20px -10px;
   }
-  
-  .gba-logo{
+
+  .gba-logo {
     background-position: -260px -10px;
   }
-  
-  .plidco-logo{
+
+  .plidco-logo {
     background-position: -620px -10px;
   }
-  
-  .murphy-logo{
+
+  .murphy-logo {
     background-position: -500px -10px;
   }
-  
-  .tdw-logo{
+
+  .tdw-logo {
     background-position: -740px -10px;
   }
-  
-  .jonell-logo{
+
+  .jonell-logo {
     background-position: -380px -10px;
   }
 

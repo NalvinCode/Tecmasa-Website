@@ -52,7 +52,7 @@ const observer = new IntersectionObserver( (entries, observer) => {
                 $(item).css("color", "#d3d0d0");
             });
     
-            var aTemp = 0.75;
+            var aTemp = 0.45;
 
             switch(entryTarget){
                 case homeBody:
