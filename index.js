@@ -19,10 +19,6 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-    res.json('Hello')
-});
-
 
 app.post('/sendMail', async function(req, res) {
     try {
